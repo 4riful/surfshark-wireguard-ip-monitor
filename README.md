@@ -1,6 +1,23 @@
 # Surfshark WireGuard IP Monitor
 
-Automatically detect when Surfshark WireGuard endpoint IPs get blocked and regenerate configs with fresh working IPs — purpose-built for users behind the Great Firewall of China where VPN IPs are flagged and blocked daily.
+**You're in China. Surfshark stops working. The Great Firewall blocked your IP. You need a new one — fast.**
+
+This tool watches Surfshark's WireGuard endpoints, detects when the GFW forces an IP change, and sends you a fresh working config on Telegram so you reconnect in seconds instead of hunting manually for hours.
+
+---
+
+## The Motive
+
+Surfshark is one of the few VPNs that still works in China (2026). But it's a constant cat-and-mouse game:
+
+1. The **Great Firewall** uses ML-based traffic fingerprinting to detect VPN protocols. WireGuard's distinctive 148-byte handshake is identified on the first packet — standard configurations are blocked with near-100% accuracy.
+2. **Surfshark rotates IPs** to route around blocks. When an endpoint IP gets flagged, they swap to a new one.
+3. **The problem**: you don't know when this happens. Your connection drops, and you have to manually check which servers still work, regenerate configs, and reconnect.
+
+**This repo closes that gap.** It monitors endpoint IPs, detects changes the moment they happen, fetches fresh WireGuard configs from Surfshark, and pushes them to your Telegram — so you can swap and reconnect immediately.
+
+Without this tool: drop everything, manually test servers, regenerate configs, hope it works.  
+With this tool: Telegram ping with a new config → import → back online.
 
 ## The Problem
 
