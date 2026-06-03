@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Runtime state and generated WireGuard configs
+last_ips.json
+*.conf
+
+# Local secrets/config scratch files
+.env
+*.local
