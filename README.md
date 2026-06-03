@@ -20,7 +20,6 @@ The repository currently contains experimental scripts. Treat it as a personal a
 | `main.py` | Checks Surfshark endpoint IPs and records changed locations in `last_ips.json`. |
 | `wireguard.py` | Reads changed locations from `last_ips.json`, requests WireGuard configs, and sends them through Telegram. |
 | `last_ips.json` | Runtime state file storing previously observed endpoint data. |
-| `main.cs` | Legacy/unrelated C# compiler experiment kept from the original repo history. |
 
 ## Requirements
 
@@ -100,8 +99,6 @@ This repo was renamed from `fuckshark` to `surfshark-wireguard-ip-monitor` to ma
 
 Suggested future cleanup:
 
-- Remove or move the unrelated `main.cs` compiler experiment.
 - Replace hardcoded credentials with environment variables.
-- Add `.gitignore` rules for runtime JSON and generated `.conf` files.
 - Split network calls into testable functions.
 - Add a dry-run mode that prints planned changes without sending Telegram messages.
