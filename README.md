@@ -1,6 +1,8 @@
 # Surfshark WireGuard IP Monitor
 
-Small Python utilities for tracking Surfshark WireGuard endpoint IP changes and sending update notifications through Telegram.
+Monitor Surfshark WireGuard endpoint IPs and automatically generate updated configs when IPs change — essential for users behind restrictive firewalls (e.g., the Great Firewall of China) where Surfshark IPs are frequently flagged and blocked.
+
+When an IP gets blocked, this tool detects the change, generates a fresh WireGuard config for the new working IP, and sends it to you via Telegram so you can reconnect immediately.
 
 The repository currently contains experimental scripts. Treat it as a personal automation toolkit, not a polished package.
 
