@@ -181,6 +181,4 @@ On first run, all locations start as "unchanged" (baseline snapshot). Subsequent
 - Add dry-run mode: log planned changes without sending Telegram messages.
 - Split network calls into testable functions with proper error handling.
 
----
 
-*This repo was renamed from `fuckshark` to `surfshark-wireguard-ip-monitor` for professionalism. The original name reflected the frustration of getting blocked. The new name reflects the solution.*
